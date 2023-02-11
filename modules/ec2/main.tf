@@ -10,7 +10,7 @@ resource "aws_instance" "default" {
 resource "aws_security_group" "default" {
   name        = var.security_group_name
   description = var.security_group_name
-  vpc_id      = "vpc-0c0c7be4f059ab962"
+  vpc_id      = "vpc-00acb39a53811c3e0"
   ingress {
     from_port   = 8080
     to_port     = 8080
