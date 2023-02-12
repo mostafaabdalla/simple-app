@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - name: create k8s cluster
+    command: eksctl create cluster --name webshop --region us-east-1 --node-type t2.small -zones us-east-1a,us-east-1b
