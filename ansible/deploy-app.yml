@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: root
+  tasks:
+  - name: clone repo app
+    command: git clone https://github.com/mostafaabdalla/microservices-demo.git
+  - name: deploy app
+    command: kubectl apply -f microservices-demo/deploy/kubernetes/complete-demo.yaml
