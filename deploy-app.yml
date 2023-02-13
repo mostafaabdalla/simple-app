@@ -1,0 +1,12 @@
+---
+- hosts: k8s
+  user: root
+  tasks:
+  - name: clone repo app
+    command: git clone https://github.com/mostafaabdalla/simple-app.git
+  - name: deploy regapp on k8s
+    command: kubectl apply -f simple-app/deployment.yml
+  - name: deploy service
+    command: kubectl apply -f simple-app/service.yml
+  - name: update k8s deployment if image changed
+    command: kubectl rollout restart deployment/regapp-deployment
