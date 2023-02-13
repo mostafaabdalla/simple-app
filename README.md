@@ -11,7 +11,5 @@ A brief description of what this project does and who it's for
 ## Deployment steps:
     1. Write ansible playbook to provision EKS cluster.
     2. Setup Jenkins job to automate the EKS cluster creation.
-    3. Setup another jenkins job to clone the microservices app and deploy it on the EKS cluster.
-## Demo
-For more information about the socks app and how to use it, please go to this link:
-https://github.com/mostafaabdalla/microservices-demo
+    3. Setup another jenkins job for the continous integration (clone, test and build the code).
+    4. Setup the final jenkins job to continously deploy the code to the EKS cluster if the CI job is successful.
