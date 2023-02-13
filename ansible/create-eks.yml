@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: k8s
   user: root
   tasks:
   - name: create k8s cluster
